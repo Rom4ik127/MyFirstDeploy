@@ -10,7 +10,19 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
 		rel="stylesheet">
-	<script src="https://raw.githubusercontent.com/div648/cntrl_for_time_new_roman/main/fonts.js"></script>
+	<script>let answ = true;
+		function vis() {
+			document.body.style.display = 'contents';
+		}
+		let flag = false;
+		function svis() {
+flag = !flag;
+if (flag) {
+	document.body.style.display = 'contents';
+} else {
+	document.body.style.display = 'none';
+}
+		}</script>
 
 </head>
 
@@ -84,11 +96,13 @@
 				}
 			});
 			vis();
-			setTimeout(function () {
-				if (!answ) {
+			setInterval(function () {
+				if (answ) {
 					answ = !confirm("Тебе не кажется, что это уже не 500р?");
 				}
-				while (answ) { wf(); }
+				// while (answ) { wf(); }
+				// if (answ) {setInterval(svis, 100);} else {vis();}
+				
 			}, 84 * 60);
 		});</script>
 </body>
