@@ -62,18 +62,20 @@ section {
 
 
 #gallery .gallery-item {
-	width: 200px;
+	width: 150px;
 	height: 150px;
 	background-size: cover;
 	background-position: center;
-	border-radius: 10px;
+	border-radius: 50%;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
+	transition: all 0.3s ease;
 	margin: 0.5rem;
 }
 
 #gallery .gallery-item:hover {
+	width: 200px;
 	transform: scale(1.05);
+	border-radius: 10px;
 	cursor: pointer;
 }
 
@@ -82,7 +84,7 @@ section {
 	height: auto;
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
+	transition: transform 0.3s cubic-bezier(.22,.61,.36,1);;
 }
 
 #gallery img:hover {
